@@ -48,6 +48,6 @@ jobs:
         file: src/Dockerfile
         push: true
         tags: |
-          iurifarenzena/aula-conversao:v1
+          iurifarenzena/aula-conversao:${{guthub.run_number}}
           iurifarenzena/aula-conversao:latest
         
