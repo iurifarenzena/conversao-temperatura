@@ -22,6 +22,6 @@ jobs:
 
     - name: Instalação do Mocha pra testes
       run: |
-        cd '/home/runner/work/post-grad-puc/post-grad-puc/03 - Devops Básico/conversao-temperatura/src/';
+        cd src;
         npm install -g mocha;
         npm install
