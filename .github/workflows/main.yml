@@ -1,0 +1,26 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: setup Node.js 18.17.0
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.17.0
+        cache: 'npm'
+
+    - name: Instalação do Mocha pra testes
+      run: |
+        cd '/home/runner/work/post-grad-puc/post-grad-puc/03 - Devops Básico/conversao-temperatura/src/';
+        npm install -g mocha;
+        npm install
